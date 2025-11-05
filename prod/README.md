@@ -5,59 +5,59 @@
   <img src="image/topology.jpg" alt="Topology Diagram" width="75%">
 </p>
 
-## 🐳 Dockerfile — Struktur & Penjelasan
-Berikut adalah contoh struktur `Dockerfile` yang digunakan untuk membangun image aplikasi:
+🐳 Dockerfile — Structure & Explanation
+Here is an example of a Dockerfile structure used to build an application image:
 
 ```dockerfile
-# Gunakan image dasar Node.js untuk tahap build
+# Base Image
 FROM node:18-alpine AS builder
 
-# Tentukan working directory di dalam container
+# Working Directory
 WORKDIR /app
 
-# Salin package.json dan install dependensi
+# Copy package.josn & install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Salin seluruh source code dan build project
+# Copy all project & build image
 COPY . .
 RUN npm run build
 
-# Tahap kedua untuk image yang ringan (Nginx)
+# MUlti Stage
 FROM nginx:alpine
 
-# Salin hasil build dari tahap sebelumnya ke direktori Nginx
+# Copy the build results from the previous step to the Nginx directory.
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose port default Nginx
+# Expose port 
 EXPOSE 80
 
-# Jalankan Nginx
+# Run Nginx
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
 ## 🏗️ Build & Push Docker Image
-1. Build Image Secara Lokal
+1. Build Image Locally
 ```
 docker build -t destiaeka/booksreview:latest .
 ```
-2. Jalankan Container
+2. Run Container
 ```
 docker run -d --name booksreview -p 80:80 destiaeka/booksreview:latest
 ```
-3. Push ke Docker Hub
+3. Push to Docker Hub
 ```
 docker push destiaeka/booksreview:latest
 ```
 
 ## ☸️ Kubernetes Manifest
 
-Untuk deployment di cluster K3s, digunakan dua file utama:
-- Deployment → Menjalankan Pod dengan image container
-- Service → Mengekspos aplikasi agar bisa diakses dari luar cluster
-Untuk expose saya menggunakan ingress
+For deployments in a K3s cluster, two main files are used:
+- Deployment → Runs Pods with container images
+- Service → Exposes the application so it can be accessed from outside the cluster
+To expose, I use ingress.
 
-Untuk menjalankan file manifest masukkan perintah berikut:
+To run the manifest file, enter the following command:
 ```
 kubectl apply -f deployment.yml
 kubectl apply -f service.yml
@@ -84,10 +84,10 @@ booksreview-ingress   traefik   ingress.destiaeka.local   103.160.37.103   80   
 ```
 
 ## ⚙️ CI/CD Workflow (GitHub Actions + Lovable Cloud)
-Proyek ini terintegrasi dengan GitHub Actions untuk mengotomatisasi proses:
-- Build image Docker
-- Push ke Docker Hub
-- Deploy otomatis ke cluster Kubernetes
+This project integrates with GitHub Actions to automate the following processes:
+- Build Docker images
+- Push to Docker Hub
+- Automatically deploy to a Kubernetes cluster
 
 ---
 ![result](image/result1.jpg)
