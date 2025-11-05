@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# Book Review Web Project 📚
 
-## Project info
+## 🧩 Deskripsi Singkat
 
-**URL**: https://lovable.dev/projects/f58efdfa-1ba1-41d3-b4bf-58cf5a9d1f69
+Proyek ini merupakan aplikasi web sederhana yang dibangun untuk menampilkan rekomendasi buku beserta ulasan dan komentar dari pengguna.  
+Seluruh infrastruktur dan manajemen cloud-nya dikelola melalui **Lovable Cloud AI**, sehingga proses pengembangan frontend dan backend dapat dilakukan dengan lebih efisien dan otomatis.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ⚙️ Teknologi yang Digunakan
 
-**Use Lovable**
+Proyek ini menggunakan teknologi modern untuk mendukung performa dan tampilan yang responsif, di antaranya:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f58efdfa-1ba1-41d3-b4bf-58cf5a9d1f69) and start prompting.
+- ⚡ **Vite** — Build tool modern untuk pengembangan cepat.  
+- ⚛️ **React (TypeScript)** — Library JavaScript untuk membangun tampilan antarmuka yang dinamis.  
+- 🎨 **Tailwind CSS** — Framework CSS untuk desain yang konsisten dan efisien.  
+- 🧱 **shadcn/ui** — Komponen UI siap pakai berbasis Tailwind.  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 💻 Menjalankan Proyek Secara Lokal
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Meskipun proyek ini dikelola oleh **Lovable Cloud**, pengembangan juga bisa dilakukan secara lokal menggunakan Node.js.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Pastikan Node.js dan npm sudah terpasang di sistem Anda.  
+Jika belum, disarankan menginstalnya menggunakan [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-Follow these steps:
+Langkah-langkah menjalankan proyek:
+1. Clone repository
+```git clone https://github.com/destiaeka/Library-Books-Review.git```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Masuk ke direktori proyek
+```cd Library-Books-Review```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Instal seluruh dependensi
+```npm install```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. Jalankan server pengembangan
+```npm run dev```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🐳 Menjalankan Menggunakan Docker
+Proyek ini juga telah dikemas dalam Docker image sehingga dapat dijalankan secara langsung tanpa perlu instalasi manual.
+1. pull image
+```docker pull destiaeka/booksreview```
 
-**Edit a file directly in GitHub**
+2. Run the Container
+``` docker run -d --name booksreview -p 80:80 destiaeka/booksreview```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Aplikasi dapat diakses pada alamat ```http://localhost``` 
 
-**Use GitHub Codespaces**
+## ⚙️ CI/CD Workflow
+Proyek ini dilengkapi dengan workflow otomatis yang menangani proses berikut:
+- Build image Docker dari source code.
+- Push image ke Docker Hub.
+- Deploy otomatis ke cluster Kubernetes (K3s).
+Semua proses tersebut dijalankan melalui GitHub Actions, sehingga setiap perubahan kode akan otomatis melalui pipeline CI/CD untuk memastikan integritas dan ketersediaan aplikasi
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🧑‍💻 Pengembang
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f58efdfa-1ba1-41d3-b4bf-58cf5a9d1f69) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Destia Eka
+📦 Repository: Library-Books-Review
+🐋 Docker Hub: destiaeka/booksreview
