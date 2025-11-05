@@ -1,53 +1,52 @@
 # Book Review Web Project 📚
 
-## 🧩 Deskripsi Singkat
+## 🧩 Description
 
-Proyek ini merupakan aplikasi web sederhana yang dibangun untuk menampilkan rekomendasi buku beserta ulasan dan komentar dari pengguna.  
-Seluruh infrastruktur dan manajemen cloud-nya dikelola melalui **Lovable Cloud AI**, sehingga proses pengembangan frontend dan backend dapat dilakukan dengan lebih efisien dan otomatis.
-
----
-
-## ⚙️ Teknologi yang Digunakan
-
-Proyek ini menggunakan teknologi modern untuk mendukung performa dan tampilan yang responsif, di antaranya:
-
-- ⚡ **Vite** — Build tool modern untuk pengembangan cepat.  
-- ⚛️ **React (TypeScript)** — Library JavaScript untuk membangun tampilan antarmuka yang dinamis.  
-- 🎨 **Tailwind CSS** — Framework CSS untuk desain yang konsisten dan efisien.  
-- 🧱 **shadcn/ui** — Komponen UI siap pakai berbasis Tailwind.  
+This project is a simple web application built to display book recommendations along with user reviews and comments.
+The entire cloud infrastructure and management are managed through Lovable Cloud AI, allowing for more efficient and automated front-end and back-end development.
 
 ---
 
-## 💻 Menjalankan Proyek Secara Lokal
+## ⚙️ The Stack
 
-Meskipun proyek ini dikelola oleh **Lovable Cloud**, pengembangan juga bisa dilakukan secara lokal menggunakan Node.js.
+This project uses modern technologies to support performance and responsiveness, including:
 
-Pastikan Node.js dan npm sudah terpasang di sistem Anda.  
-Jika belum, disarankan menginstalnya menggunakan [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating).
+- ⚡ **Vite** — A modern build tool for rapid development.
+- ⚛️ **React (TypeScript)** — A JavaScript library for building dynamic user interfaces.
+- 🎨 **Tailwind CSS** — A CSS framework for consistent and efficient design.
+- 🧱 **shadcn/ui** — Ready-to-use UI components based on Tailwind.
+---
 
-Langkah-langkah menjalankan proyek:
+## 💻 Local Project
+
+Although this project is maintained by **Lovable Cloud**, development can also be done locally using Node.js.
+
+Make sure Node.js and npm are installed on your system.
+If not, we recommend using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+Steps to run the project:
 1. Clone repository
 ```
 git clone https://github.com/destiaeka/Library-Books-Review.git
 ```
 
-3. Masuk ke direktori proyek
+2. Go to the project directory
 ```
 cd Library-Books-Review
 ```
 
-5. Instal seluruh dependensi
+3. Install all dependencies
 ```
 npm install
 ```
 
-7. Jalankan server pengembangan
+4. Run the development server
 ```
 npm run dev
 ```
 
-## 🐳 Menjalankan Menggunakan Docker
-Proyek ini juga telah dikemas dalam Docker image sehingga dapat dijalankan secara langsung tanpa perlu instalasi manual.
+## 🐳 Running Using Docker
+This project has also been packaged in a Docker image so it can be run directly without manual installation.
 1. pull image
 ```
 docker pull destiaeka/booksreview
@@ -55,22 +54,22 @@ docker pull destiaeka/booksreview
 
 3. Run the Container
 ```
- docker run -d --name booksreview -p 80:80 destiaeka/booksreview
+docker run -d --name booksreview -p 80:80 destiaeka/booksreview
 ```
 
-5. Aplikasi dapat diakses pada alamat
+5. The application can be accessed at
 ```
 http://localhost
-``` 
+```
 
 ## ⚙️ CI/CD Workflow
-Proyek ini dilengkapi dengan workflow otomatis yang menangani proses berikut:
-- Build image Docker dari source code.
-- Push image ke Docker Hub.
-- Deploy otomatis ke cluster Kubernetes (K3s).
-Semua proses tersebut dijalankan melalui GitHub Actions, sehingga setiap perubahan kode akan otomatis melalui pipeline CI/CD untuk memastikan integritas dan ketersediaan aplikasi
+This project is equipped with an automated workflow that handles the following processes:
+- Build a Docker image from source code.
+- Push the image to Docker Hub.
+- Automatic deployment to a Kubernetes (K3s) cluster.
+All of these processes are executed through GitHub Actions, so every code change is automatically pushed through the CI/CD pipeline to ensure application integrity and availability.
 
-## 🧑‍💻 Pengembang
+## 🧑‍💻 Developer
 ### Destia Eka
 - 📦 Repository: [Library-Books-Review](https://github.com/destiaeka/Library-Books-Review.git)
 - 🐋 Docker Hub: [destiaeka/booksreview](https://hub.docker.com/repository/docker/destiaeka/booksreview)
