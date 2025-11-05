@@ -87,3 +87,9 @@ Proyek ini terintegrasi dengan GitHub Actions untuk mengotomatisasi proses:
 - Build image Docker
 - Push ke Docker Hub
 - Deploy otomatis ke cluster Kubernetes
+
+---
+![result](image/result1.jpg)
+![result](image/result2.jpg)
+![result](image/result3.jpg)
+---
