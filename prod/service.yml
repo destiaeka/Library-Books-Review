@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: booksreview-service
+spec:
+  selector:
+    app: booksreview
+  ports:
+  - port: 80
+    targetPort: 80

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booksreview-deployment
+  labels:
+    app: booksreview
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: booksreview
+  template:
+    metadata:
+      labels:
+        app: booksreview
+    spec:
+      containers:
+      - name: booksreview
+        image: destiaeka/booksreview
+        ports:
+        - containerPort: 80
