@@ -1,6 +1,10 @@
 # 🚀 Book Review Web — Production Deployment Guide
 ## 🐳 Dockerfile — Struktur & Penjelasan
 
+---
+![topology](image/topology.jpg)
+---
+
 Berikut adalah contoh struktur `Dockerfile` yang digunakan untuk membangun image aplikasi:
 
 ```dockerfile
