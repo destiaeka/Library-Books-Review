@@ -22,6 +22,6 @@ jobs:
       
       - name: build & push
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/booksreview:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/booksreview:latest .
           docker push ${{ secrets.DOCKER_USERNAME}}/booksreview:latest
       
