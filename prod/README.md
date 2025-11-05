@@ -5,7 +5,7 @@
   <img src="image/topology.jpg" alt="Topology Diagram" width="75%">
 </p>
 
-🐳 Dockerfile — Structure & Explanation
+## 🐳 Dockerfile — Structure & Explanation
 Here is an example of a Dockerfile structure used to build an application image:
 
 ```dockerfile
