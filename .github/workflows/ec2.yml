@@ -47,7 +47,6 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           password: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            su - ides
             cd prod
             kubectl apply -f deployment.yml
             kubectl apply -f service.yml
